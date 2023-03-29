@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using journalApp2._0.Infrastructure.Commands;
 using journalApp2._0.ViewModels.Base;
-using journalApp2._0.Views.Windows;
 
 namespace journalApp2._0.ViewModels
 {
@@ -31,9 +30,9 @@ namespace journalApp2._0.ViewModels
         }
 
         //Первая задача
-        private double ab ;
-        private double ad ;
-        private double dc ;
+        private double ab;
+        private double ad;
+        private double dc;
         public double Ab
         {
             get { return ab; }

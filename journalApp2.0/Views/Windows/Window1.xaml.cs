@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace journalApp2._0.Views.Windows
+namespace journalApp2._0
 {
     /// <summary>
     /// Логика взаимодействия для Window1.xaml
