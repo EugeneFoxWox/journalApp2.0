@@ -14,7 +14,7 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Спасение">
-                <MenuItem Header="Выход"></MenuItem>
+                <MenuItem Header="Выход" Command="" CommandParameter=""></MenuItem>
             </MenuItem>
 
             <MenuItem Header="Риск">
@@ -22,7 +22,12 @@
             </MenuItem>
         </Menu>
         <StatusBar DockPanel.Dock="Bottom">
-            
+            <StatusBarItem MinWidth="150">
+                <TextBlock Text="{Binding Status}"/>
+            </StatusBarItem>
+            <StatusBarItem>
+                <ProgressBar Width="120" Height="14" Value="45"/>
+            </StatusBarItem>
         </StatusBar>
         <TabControl>
             <TabItem Header="Вкладка 1">
@@ -35,12 +40,22 @@
                         <ColumnDefinition Width="157"/>
                         <ColumnDefinition Width="637"/>
                     </Grid.ColumnDefinitions>
-                    <Rectangle Grid.Column="0" Grid.Row="0" Fill="Blue" Stroke="black"/>
-                    <Ellipse Grid.Column="1" Grid.Row="0" Fill="Black" Stroke="black"/>
+
+
+                    <GridSplitter Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="4"/>
+                    <Label Grid.Column="1" Content="Введите AB" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="332"/>
+                    <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="10,41,0,0" TextWrapping="Wrap" Text="{Binding Ab}" VerticalAlignment="Top" Width="120"/>
+                    <Label Grid.Column="1" Content="Введите AD" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" Width="332" Grid.Row="1"/>
+                    <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="10,37,0,0" TextWrapping="Wrap" Text="{Binding Ad}" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+                    <Label Grid.Column="1" Content="Введите DC" HorizontalAlignment="Left" Margin="10,65,0,0" VerticalAlignment="Top" Width="332" Grid.Row="1"/>
+                    <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="10,96,0,0" TextWrapping="Wrap" Text="{Binding Dc}" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+                    <Label Grid.Column="1" Content="{Binding Per}" HorizontalAlignment="Left" Margin="274,33,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+                    <Button Grid.Column="1" Content="Считать" HorizontalAlignment="Left" Margin="184,37,0,0" Grid.Row="1" VerticalAlignment="Top" Command="{Binding FirstCommand}"/>
+                    <Button x:Name="One_" Grid.Column="1" Content="Следующее задание" HorizontalAlignment="Left" Margin="10,221,0,0" Grid.Row="1" VerticalAlignment="Top" Width="139"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Вкладка 2">
-                
+
             </TabItem>
         </TabControl>
     </DockPanel>

@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using journalApp2._0.ViewModels;
 
-namespace journalApp2._0
+namespace journalApp2._0.Views.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для Window1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Window1 : Window
     {
-        public MainWindow()
+        public Window1()
         {
             InitializeComponent();
-        }
-
-        private void One__Click(object sender, RoutedEventArgs e, NavigationService navigationService)
-        {
-            navigationService.Navigate(new Uri("/Window1.xaml", UriKind.Relative));
         }
     }
 }
