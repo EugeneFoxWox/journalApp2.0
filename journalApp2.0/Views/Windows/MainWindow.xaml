@@ -57,6 +57,9 @@
             <TabItem Header="Вкладка 2">
 
             </TabItem>
+            <TabItem Header="Вкладка 3">
+                
+            </TabItem>
         </TabControl>
     </DockPanel>
 </Window>
