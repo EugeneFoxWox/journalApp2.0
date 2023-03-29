@@ -51,7 +51,7 @@
                     <TextBox Grid.Column="1" HorizontalAlignment="Left" Margin="10,96,0,0" TextWrapping="Wrap" Text="{Binding Dc}" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
                     <Label Grid.Column="1" Content="{Binding Per}" HorizontalAlignment="Left" Margin="274,33,0,0" Grid.Row="1" VerticalAlignment="Top"/>
                     <Button Grid.Column="1" Content="Считать" HorizontalAlignment="Left" Margin="184,37,0,0" Grid.Row="1" VerticalAlignment="Top" Command="{Binding FirstCommand}"/>
-                    <Button x:Name="One_" Grid.Column="1" Content="Следующее задание" HorizontalAlignment="Left" Margin="10,221,0,0" Grid.Row="1" VerticalAlignment="Top" Width="139"/>
+                    <Button x:Name="One_" Grid.Column="1" Content="Следующее задание" HorizontalAlignment="Left" Margin="10,221,0,0" Grid.Row="1" VerticalAlignment="Top" Width="139" Command="{Binding GoSecond}"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Вкладка 2">

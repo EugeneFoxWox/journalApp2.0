@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using journalApp2._0.Infrastructure.Commands;
 using journalApp2._0.ViewModels.Base;
+using journalApp2._0.Views.Windows;
 
 namespace journalApp2._0.ViewModels
 {
@@ -48,35 +49,37 @@ namespace journalApp2._0.ViewModels
             get { return dc; }
             set { Set(ref dc, value); }
         }
-        private double per;
+        private string per;
 
-        public double Per
+        public string Per
         {
             get { return per; }
             set { Set(ref per, value); }
         }
-        public double Button_Click()
-        {
-
-            per = Math.Sqrt(ab* ab + ad* ad)+ Math.Sqrt(ad* ad + dc* dc)+ ab + ad + dc;
-            return per;
-        }
 
 
         public ICommand FirstCommand { get; }
+        public ICommand GoSecond { get;  }
         private bool CanFirstCommandExecute(object p) => true;
+        private bool CanGoSecondExecute(object p) => true;
         
         private void FirstCommandExecute(object p)
         {
 
-            per = Math.Sqrt(ab * ab + ad * ad) + Math.Sqrt(ad * ad + dc * dc) + ab + ad + dc;
-            per.ToString();
+            Per = (Math.Sqrt(Ab * Ab + Ad * Ad) + Math.Sqrt(Ad * Ad + Dc * Dc) + Ab + Ad + Dc).ToString();
         
+        }
+
+        private void GoSecondExecute(object p)
+        {
+            Window1 window = new Window1();
+            window.ShowDialog();
         }
 
         public MainWindowViewModel()
         {
             FirstCommand = new LambdaCommand(FirstCommandExecute, CanFirstCommandExecute);
+            GoSecond = new LambdaCommand(GoSecondExecute, CanGoSecondExecute);
         }
     }
 }

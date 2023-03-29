@@ -26,9 +26,6 @@ namespace journalApp2._0
             InitializeComponent();
         }
 
-        private void One__Click(object sender, RoutedEventArgs e, NavigationService navigationService)
-        {
-            navigationService.Navigate(new Uri("/Window1.xaml", UriKind.Relative));
-        }
+        
     }
 }
