@@ -30,6 +30,7 @@ namespace journalApp2._0.ViewModels
         }
 
         //Первая задача
+
         private double ab;
         private double ad;
         private double dc;
