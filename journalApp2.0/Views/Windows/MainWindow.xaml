@@ -55,10 +55,26 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Вкладка 2">
+                <Grid>
+                    <GridSplitter Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" HorizontalAlignment="Right" Width="4"/>
+                    <Label Content="Введите AB" HorizontalAlignment="Left" Margin="65,15,0,0" VerticalAlignment="Top" Width="332"/>
+                    <TextBox HorizontalAlignment="Left" Margin="44,50,0,0" TextWrapping="Wrap" Text="{Binding Ab}" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Введите AD" HorizontalAlignment="Left" Margin="272,7,0,0" VerticalAlignment="Top" Width="332"/>
+                    <TextBox HorizontalAlignment="Left" Margin="254,50,0,0" TextWrapping="Wrap" Text="{Binding Ad}" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Введите DC" HorizontalAlignment="Left" Margin="438,10,0,0" VerticalAlignment="Top" Width="332"/>
+                    <TextBox HorizontalAlignment="Left" Margin="423,50,0,0" TextWrapping="Wrap" Text="{Binding Dc}" VerticalAlignment="Top" Width="120"/>
+                    <Label Grid.Column="1" Content="{Binding Per}" HorizontalAlignment="Left" Margin="274,33,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+                    <Button Content="Считать" HorizontalAlignment="Left" Margin="580,75,0,0" VerticalAlignment="Top" Command="{Binding FirstCommand}"/>
+                    <Label Content="X" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="132"/>
+                    <Label Content="Y" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Width="132"/>
+                    <TextBox HorizontalAlignment="Left" Margin="44,98,0,0" TextWrapping="Wrap" Text="{Binding Ab}" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Margin="254,98,0,0" TextWrapping="Wrap" Text="{Binding Ad}" VerticalAlignment="Top" Width="120"/>
+                    <TextBox HorizontalAlignment="Left" Margin="423,98,0,0" TextWrapping="Wrap" Text="{Binding Dc}" VerticalAlignment="Top" Width="120"/>
+                </Grid>
 
             </TabItem>
             <TabItem Header="Вкладка 3">
-                
+
             </TabItem>
         </TabControl>
     </DockPanel>
